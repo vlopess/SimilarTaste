@@ -11,7 +11,7 @@ Similiar Taste é um projeto que permite aos usuários descobrir músicas e arti
 
 ## Demonstração
 
-![alt text](https://github.com/[vlopess]/[SimiliarTaste]/blob/[main]/image.jpg?raw=true)
+![alt text](https://github.com/vlopess/SimilarTaste/blob/main/image.jpg?raw=true)
 
 
 Você pode usar o site apertando o botão abaixo:
