@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" sizes="16x16"  href="/image/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+  </script>
+  <title>Similiar Taste</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+<body>
+  <header>
+    <div align="center" class="header">
+      <div style="padding: 25px;">
+        <h2>Descubra Artistas e Músicas Semelhantes</h2>
+        <p> Explore novas músicas e descubra novos artistas que se encaixam perfeitamente com o seu gosto. Basta inserir o nome de um(a) artista/música que você adora para encontrar faixas ou artistas semelhantes.</p>
+      </div>
+      <div id="song" hidden>
+        <h1>Similiar Song</h1>
+        <form>
+          <div class="searchSong">
+            <input id="nomeSong" name="nomeSong" type="text" placeholder="Digite a música" onkeypress="clickPress(event, 2)"/>
+          </div>
+          <div class="searchSong">
+            <input id="nomeArtista" name="nomeArtista" type="text" placeholder="Digite o artista" onkeypress="clickPress(event, 2)"/>
+          </div>
+        </form>
+      </div>
+      <div id="artista">
+        <h1>Similiar Artista</h1>
+        <form action="#">
+          <div class="search">
+            <input id="nome" type="text" placeholder="Digite o artista" onkeypress="clickPress(event, 1)"/>
+          </div>
+        </form>
+      </div>      
+      <div>
+        <button class="options" id="buttonSong">Similiar Songs</button>
+        <button  class="options" id="buttonArtista" >Similiar Artistas</button>
+        <button id="Artista" class="pesquisar" type="button" onclick="getSimilarArtista()">Pesquisar</button>
+        <button id="Song" class="pesquisar" type="button" onclick="getSimilarSong()">Pesquisar</button>
+      </div>
+    </div>
+  </header>
+  <main id="main">    
+    <div align="center" id="teste"></div>
+  <main/>
+  <footer class="strick-footer">
+    <p>Created by <a href="https://github.com/vlopess" target='_blank'>Victor Lopes</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
