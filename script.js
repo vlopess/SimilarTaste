@@ -1,6 +1,6 @@
 $().ready(function(){
   $("#buttonArtista").css("background-color", "#555555");
-  $("#buttonArtista").css("color", "#fff");
+  $("#buttonArtista").css("color", "#fff");  
 });
 
 const botao1 = document.getElementById('buttonSong');
@@ -27,6 +27,7 @@ botao1.addEventListener('click', function() {
     $("#Song").css("display", "block");
     $("#Artista").css("display", "none");
     document.getElementById("teste").innerHTML = "";
+    $("main").css("min-height", "90vh");  
   } 
 });
 
@@ -43,6 +44,7 @@ botao2.addEventListener('click', function() {
     $("#Song").css("display", "none");
     $("#Artista").css("display", "block");
     document.getElementById("teste").innerHTML = ""; 
+    $("main").css("min-height", "90vh");  
   }  
 });
 
@@ -50,9 +52,10 @@ botao2.addEventListener('click', function() {
 
 //track.getsimilar&artist=cher&track=believe
 function pegarSimilarArtista(valor){    
-    document.getElementById("teste").innerHTML = "<div class='loader' id='loader'><br/></div><h1>BUSCANDO...</h1>"; 
+    $("main").css("min-height", "90vh");  
+    document.getElementById("teste").innerHTML = "<div class='loader' id='loader'><br/></div><h2>BUSCANDO...</h2>"; 
     setTimeout(function() {
-      $.getJSON("https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" + valor + "&limit=18&api_key=4a9f5581a9cdf20a699f540ac52a95c9&limit=10&format=json&callback=?", function(json) {
+      $.getJSON("https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" + valor + "&limit=20&api_key=4a9f5581a9cdf20a699f540ac52a95c9&limit=10&format=json&callback=?", function(json) {
         let html = [];
         try{
           if (json['error'] === 6 || !json.similarartists.artist.length) {
@@ -95,11 +98,12 @@ function pegarSimilarArtista(valor){
                 }
               }
               document.getElementById("teste").innerHTML = html.join('');
+              $("main").css("min-height", "30vh");  
             });
             
           }
         }catch {
-          document.getElementById("teste").innerHTML = "<h1>ARTISTA NÃO EXISTENTE</h1>";
+          document.getElementById("teste").innerHTML = "<h2>ARTISTA NÃO EXISTENTE</h2>";
         }
 
       });
@@ -107,12 +111,13 @@ function pegarSimilarArtista(valor){
     }, 1000);        
 }
 
-function pegarSimilarSong(nome, artista){    
-    document.getElementById("teste").innerHTML = "<div class='loader' id='loader'><br/></div><h1>BUSCANDO...</h1>"; 
+function pegarSimilarSong(nome, artista){  
+    $("main").css("min-height", "90vh");  
+    document.getElementById("teste").innerHTML = "<div class='loader' id='loader'><br/></div><h2>BUSCANDO...</h2>"; 
     setTimeout(function() {
-      $.getJSON("https://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist="+artista+"&track=" + nome + "&limit=18&api_key=4a9f5581a9cdf20a699f540ac52a95c9&limit=10&format=json&callback=?", function(json) {
+      $.getJSON("https://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist="+artista+"&track=" + nome + "&limit=20&api_key=4a9f5581a9cdf20a699f540ac52a95c9&limit=10&format=json&callback=?", function(json) {
         if (json['error'] === 6 || !json.similartracks.track.length) {
-            document.getElementById("teste").innerHTML = "<h1>ARTISTA/MÚSICA NÃO EXISTENTE</h1>";
+            document.getElementById("teste").innerHTML = "<h2>ARTISTA/MÚSICA NÃO EXISTENTE</h2>";
             loading.style.display = 'none';
           } else {  
             const dados = [];
@@ -151,6 +156,7 @@ function pegarSimilarSong(nome, artista){
                 }
               }
               document.getElementById("teste").innerHTML = html.join('');
+              $("main").css("min-height", "30vh");  
             });
             
           }
