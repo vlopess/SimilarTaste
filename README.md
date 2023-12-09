@@ -13,7 +13,7 @@ Similiar Taste é um projeto que permite aos usuários descobrir músicas e arti
 ![alt text](https://github.com/vlopess/SimilarTaste/blob/main/tela_1.gif?raw=true)
 Você pode usar o site apertando o botão abaixo:
 
-<a href = "https://similarartists.vlopess.repl.co/" target="_blank"><img src="https://img.shields.io/badge/-Similar Taste-%23333?style=for-the-badge&logoColor=white" target="_blank"></a>
+<a href = "https://vlopess.github.io/SimilarTaste/" target="_blank"><img src="https://img.shields.io/badge/-Similar Taste-%23333?style=for-the-badge&logoColor=white" target="_blank"></a>
 
 ## Feedback
 
