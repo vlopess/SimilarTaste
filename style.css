@@ -240,38 +240,3 @@ p {
   margin: 30px;
   font-size: 20px;
 }
-
-@media screen and (max-width: 1200px) {
-  h1 {
-    font-size: 120px;
-  }
-  h3{
-    margin-top: 370px;
-    width: 415px;
-  }
-  .pesquisar{
-    font-size: 40px;
-  }
-  .searchSong{
-    width: 700px;
-  }
-  .search{
-    width: 700px;
-  }
-  input{
-    font-size: 32px;
-    width: 600px;
-  }
-  .options{
-    width: 250px;
-    font-size: 28px
-  }
-  header{
-    height: 65%;
-  }
-  .card {
-    width: 420px;
-    height: 420px;
-    margin: 20px 15px;
-  }
-}
