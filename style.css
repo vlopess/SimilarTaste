@@ -156,7 +156,7 @@ h3 {
   margin-top: 270px;
   text-shadow: 0 0 5px #999;
   text-align: left;
-  padding-left: 10px;
+  /* padding-left: 10px; */
   height: 50px;
   border-radius: 7px;
   width: 319px;
@@ -245,11 +245,11 @@ p {
     font-size: 60px;
   }
   h3{
-    margin-top: 370px;
-    width: 415px;
+    margin-top: 125px;
+    width: 175px;
   }
   .pesquisar{
-    font-size: 40px;
+    font-size: 20px;
   }
   .searchSong{
     width: 300px;
@@ -262,15 +262,14 @@ p {
     width: 280px;
   }
   .options{
-    width: 200px;
-    font-size: 244x
+    width: 120px;    
   }
   header{
-    height: 65%;
+    height: 55%;
   }
   .card {
-    width: 420px;
-    height: 420px;
+    width: 178px;
+    height: 178px;
     margin: 20px 15px;
   }
 }
