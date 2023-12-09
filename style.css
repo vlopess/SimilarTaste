@@ -240,9 +240,9 @@ p {
   margin: 30px;
   font-size: 20px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   h1 {
-    font-size: 120px;
+    font-size: 60px;
   }
   h3{
     margin-top: 370px;
@@ -252,18 +252,18 @@ p {
     font-size: 40px;
   }
   .searchSong{
-    width: 700px;
+    width: 300px;
   }
   .search{
-    width: 700px;
+    width: 300px;
   }
   input{
-    font-size: 32px;
-    width: 600px;
+    font-size: 24px;
+    width: 280px;
   }
   .options{
-    width: 250px;
-    font-size: 28px
+    width: 200px;
+    font-size: 244x
   }
   header{
     height: 65%;
