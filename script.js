@@ -55,7 +55,7 @@ function pegarSimilarArtista(valor){
     $("main").css("min-height", "90vh");  
     document.getElementById("teste").innerHTML = "<div class='loader' id='loader'><br/></div><h2>BUSCANDO...</h2>"; 
     setTimeout(function() {
-      $.getJSON("https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" + valor + "&limit=20&api_key=4a9f5581a9cdf20a699f540ac52a95c9&limit=10&format=json&callback=?", function(json) {
+      $.getJSON("https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" + valor + "&limit=20&api_key=53ca750ff08680650a1aa431bf02a97a&limit=10&format=json&callback=?", function(json) {
         let html = [];
         try{
           if (json['error'] === 6 || !json.similarartists.artist.length) {
@@ -76,7 +76,7 @@ function pegarSimilarArtista(valor){
             }
         
             const promises = nomes.map(nome => {
-              const apiUrl = "https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" + nome + "&api_key=4a9f5581a9cdf20a699f540ac52a95c9&limit=10&format=json&callback=?";
+              const apiUrl = "https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" + nome + "&api_key=53ca750ff08680650a1aa431bf02a97a&limit=10&format=json&callback=?";
               return $.getJSON(apiUrl);
             });
             
@@ -115,7 +115,7 @@ function pegarSimilarSong(nome, artista){
     $("main").css("min-height", "90vh");  
     document.getElementById("teste").innerHTML = "<div class='loader' id='loader'><br/></div><h2>BUSCANDO...</h2>"; 
     setTimeout(function() {
-      $.getJSON("https://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist="+artista+"&track=" + nome + "&limit=20&api_key=4a9f5581a9cdf20a699f540ac52a95c9&limit=10&format=json&callback=?", function(json) {
+      $.getJSON("https://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist="+artista+"&track=" + nome + "&limit=20&api_key=53ca750ff08680650a1aa431bf02a97a&limit=10&format=json&callback=?", function(json) {
         if (json['error'] === 6 || !json.similartracks.track.length) {
             document.getElementById("teste").innerHTML = "<h2>ARTISTA/MÚSICA NÃO EXISTENTE</h2>";
             loading.style.display = 'none';
@@ -136,7 +136,7 @@ function pegarSimilarSong(nome, artista){
             const promises = dados.map(dado => {
               const artista = dado.split(";")[0];
               const nome = dado.split(";")[1];
-              const apiUrl = "https://ws.audioscrobbler.com/2.0/?method=track.getInfo&artist="+artista+"&track="+nome+"&api_key=4a9f5581a9cdf20a699f540ac52a95c9&limit=10&format=json&callback=?";
+              const apiUrl = "https://ws.audioscrobbler.com/2.0/?method=track.getInfo&artist="+artista+"&track="+nome+"&api_key=53ca750ff08680650a1aa431bf02a97a&limit=10&format=json&callback=?";
               return $.getJSON(apiUrl);
             });
             
